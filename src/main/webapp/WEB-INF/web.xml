@@ -10,12 +10,7 @@
         <servlet-class>org.glassfish.jersey.servlet.ServletContainer</servlet-class>
         <init-param>
             <param-name>jersey.config.server.provider.packages</param-name>
-            <param-value>
-                <!-- Swagger resources -->
-                io.swagger.v3.jaxrs2.integration.resources,
-                <!-- Project servlets -->
-                com.example.jersey.rest.servlets
-            </param-value>
+            <param-value>io.swagger.v3.jaxrs2.integration.resources,com.example.jersey.rest.servlets</param-value>
         </init-param>
     </servlet>
     <servlet-mapping>
