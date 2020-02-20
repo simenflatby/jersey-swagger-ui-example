@@ -7,6 +7,16 @@
     <artifactId>jersey-swagger-ui-example</artifactId>
     <packaging>war</packaging>
     <version>1.0.0</version>
+
+    <description>
+        Example on how to co host Swagger UI in a Jersey application.
+        mvn jetty:run-war
+        REST-service: http://localhost:8080/api/hello
+        OpenApi json format: http://localhost:8080/api/openapi.json
+        OpenApi yaml format: http://localhost:8080/api/openapi.yaml
+        SwaggerUI: http://localhost:8080/swagger-ui/
+    </description>
+
     <properties>
         <!-- Build plugins -->
         <java.version>1.8</java.version>
@@ -149,6 +159,11 @@
                         </replacement>
                     </replacements>
                 </configuration>
+            </plugin>
+            <plugin>
+                <groupId>org.eclipse.jetty</groupId>
+                <artifactId>jetty-maven-plugin</artifactId>
+                <version>9.4.20.v20190813</version>
             </plugin>
         </plugins>
     </build>
